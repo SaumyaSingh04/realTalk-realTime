@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: realTalk-realtime
+    env: node
+    plan: free
+    buildCommand: npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: 18
+      - key: FRONTEND_URL
+        value: https://realtalk-realtime.onrender.com
+      - key: MONGO_DB_URI
+        value: mongodb+srv://soab0419:abhisau@chatting-mern.cqsfkh5.mongodb.net/
+      - key: JWT_SECRET
+        value: abhisha
